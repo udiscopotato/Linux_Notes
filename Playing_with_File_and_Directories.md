@@ -91,3 +91,11 @@ There're two types of links in linux, i.e.
 - ln []
 NOTE:-  we can not create link to a specific file or directory inside it's origin directory.
         Hard Link only work if both the origin and link reference directory is in same bulk device or in a same partition.
+## Compressing and Uncompressing
+We can compress and uncompress files and directories using following commands
+### tar
+- tar cvf [tarfile name] [file or directory name]   (this will compress a little and archive the files)
+- tar xvf [compressed file name]   (this will extract the archive file)
+### gzip
+- gzip [file/archive name]  (this will compress the file) (this will add .gz extension at the end)
+- gzip -d [.gz file]  (to uncompress the compressed file)
