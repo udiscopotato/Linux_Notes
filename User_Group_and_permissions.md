@@ -38,6 +38,7 @@ We can change ownership of a file using these two commands
 - chown username:groupname [file/dir] (this will change user and group owner of the specified)
 ### chgrp (Change Group)
 - chgrp groupname [file/dir]  (change group ownership of a file)
+- chgrp -R group1 group2  (It'll change the group to group2 from group1 -R is for directory)
 ## Access Control List (ACL permissions)
 ACL provides an additional, more flexible permission mechanism for file systems. It is designed to assist with UNIX file permissions. ACL allows you to give permissions to any group any user and to any disc resource.
 ### Use of ACL
@@ -54,3 +55,45 @@ NOTE: setting write(w) permission with ACL doesnot allow to remove it.
 ### getfacl (Get File Access Control List)
 - getfacl /path/to/file
 - getfacl /path/to/dir
+## User Management
+To create user, delete user, modify user configurations we need below commands
+### useradd OR adduser
+- adduser username (create user in interactive way)
+- useradd username (create simple user with no other specification)
+- useradd -g groupname -s /bin/bash -c "Comment" -m -d /path/to/home username  (create user with given specifications NB here -m is creating home dir during user creation)
+### usermod
+- usermod -a -G groupname username  (to add user to group)
+### userdel
+- userdel username (to delete user  * this command will not remove user home dir)
+- userdel -r username  (this will remove user and it's home directory)
+### passwd
+- passwd username  (to change password of user)
+### id
+- id username  (It'll show you userid with other informations)
+### NOTE: 1. all user informations are present in /etc/passwd while all passwords in /etc/shadow
+###       2. to login to a user we can use commmand "su - username"
+###       3. a user can be part of multiple groups or can be in no groups.
+## Group Management
+We can achive group management using below commands
+### groupadd
+- groupadd groupname
+### groupmod 
+### groupdel
+### NOTE: 1. a group can be part of other groups 
+###       2. groups descriptions are available at /etc/group
+## Password Aging 
+we can change password age using command "chage"
+### chage 
+- chage -m minday -M maxday -I inactiveday -E expireday username 
+### we can edit file /etc/login.defs to make our default password polity for all user (Important)
+## Monitor Users
+### who
+- who (this command will show number of users currently logged-in with their terminal id and many more)
+### last
+- last (this will tell every user list logged in from last time)
+### w
+- 
+### finger
+- 
+### id
+- 
