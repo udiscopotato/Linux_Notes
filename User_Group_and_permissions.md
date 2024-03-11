@@ -86,14 +86,3 @@ we can change password age using command "chage"
 ### chage 
 - chage -m minday -M maxday -I inactiveday -E expireday username 
 ### we can edit file /etc/login.defs to make our default password polity for all user (Important)
-## Monitor Users
-### who
-- who (this command will show number of users currently logged-in with their terminal id and many more)
-### last
-- last (this will tell every user list logged in from last time)
-### w
-- 
-### finger
-- 
-### id
-- 
