@@ -1,0 +1,8 @@
+- lscpu (this will show entire CPU detail)
+- lsblk  (this will show entire disk and filesystem details)
+- lsmem  (memory details)
+- lshw   (give all details about whole hardwares)
+- file /dev/name  (this will tell which type of file system in the directory)
+- dmidecode  (It'll show all information about infrastructure)
+- systemd-detect-virt  (This will show which virtualization technology used)
+- arch  (this will tell what's the architecture of current system)
