@@ -43,7 +43,7 @@ These are My notes that I made during my Linux study and practice These can also
     - Linux is case-sensitive i.e. command "ABC" , "AbC" , "abc" all are different commands
 
 ### 8. What's Linux kernel ?
-    - Linux kernel is not an Operating System, It's a small software within Linux OS which takes command from user and pass it to system hardware or paripherals.
+    - Linux kernel is not an Operating System, It's a small software within Linux OS which takes command from user and pass it to system hardware or paripherals. It's the interface between hardware and software.
 
 ### 9. What's file system and give example of some linux filesystems ?
     - File system is a major component of any OS. The filesystem manages files and directory organization in the Open-source. Without a file system, file stored in the os will be a large bulk body without any indexing.
@@ -74,4 +74,10 @@ These are My notes that I made during my Linux study and practice These can also
     - locate uses prebuild database which should be regularly updated while find iterates over a filesystem to locate files. Thus locate is faster then find, but can be inaccurate if It's database is not updated.
     To update locate's cache we need to run command "updatedb"
 
-### 12. 
+### 12. What is shell ?
+    - shell is the CLI(Command Line) interface which works between between user/application and kernel. A shell allows a user to give commands to the kernel and receive responses from it.
+
+### 13. What is a Shell Script ?
+    - A shell-script is a executable file containing multiple shell commands executed sequencially. The file can contain: Shell(#!/bin/bash), Commands(ls,echo,cp,etc), Comments(#), Statements(if,while,for,etc)
+
+### 14. 
